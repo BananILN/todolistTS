@@ -13,6 +13,55 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.container-task {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.task {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.input-task {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.input-add-task {
+  width: 100%;
+  max-width: 40rem;
+  height: 2.8rem;
+  padding: 0 1rem;
+  border-radius: 8px;
+  border: 1px solid #646cff;
+  margin-right: 1rem;
+}
+
+/* Остальные стили остаются без изменений */
+
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -26,11 +75,6 @@ body {
  
 }
 
-input{
-  width: 40em;
-  height: 2.8em;
-
-}
 
 h1 {
   font-size: 3.2em;

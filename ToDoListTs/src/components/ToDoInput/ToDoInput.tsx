@@ -1,13 +1,20 @@
 import React from "react";
+import Button from "../Button/Button";
+import List from "../List/List";
 
 export default function ToDoInput(){
 
+    const onSaveData = () =>{
+
+    }
 
     return (
-        <div> 
-            <h1 >Список дел </h1>
+        <div className="main"> 
+            <h1>Список дел </h1>
 
-            <input />
+            <input className="input-add-task"/>
+            <Button buttonText={"Добавить"} onClick={onSaveData}/>
+            <List />
         </div>
     ) 
 }
