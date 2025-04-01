@@ -1,34 +1,15 @@
 import React, { useState } from "react";
+import { Ttask } from "../../App";
 
-type Ttask =  {
-        id:number;
-        taskText:string;
-        completed:boolean;
-    }
 
-export default function List(){
+type TListProps = {
+    tasks: Ttask[];
+    onCompleted: (taskId:number) => void;
+    onDelete:(taskId:number) => void;
+}
 
-    const [completed, IsCompelted] = useState(false);
 
-    const [tasks, setTasks] =useState<Ttask[]> ([
-        { id: 1, taskText: "Закончить проект", completed: false },
-        { id: 2, taskText: "Купить продукты", completed: false },
-        { id: 3, taskText: "Позвонить маме", completed: false },
-    ]) 
-       
-    
-
-    const onCompleted = (taskId:number) =>{
-        setTasks(tasks.map(task =>
-            task.id === taskId
-            ? {...task, completed: !task.completed}
-            : task
-        ))
-    }
-    const onDelete = (taskId:number) =>{
-        setTasks(tasks.filter(task => task.id !== taskId))
-    }
-
+export default function List({tasks, onCompleted, onDelete}: TListProps){
     return(
         <div className="container-task">
             {tasks.map((task)=>(
